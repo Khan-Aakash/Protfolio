@@ -321,9 +321,10 @@ ul li {
 .portfolio img {
   width: 100%;
   border-radius: 15px;
+  margin-bottom: 20px;
 }
 .portfolio .text {
-  border-radius: 5px;
+  border-radius: 50px;
   margin-left: 153px;
   margin-right: 40px;
   padding: 25px;
@@ -573,6 +574,69 @@ ul li {
     border-radius: 50%;
     z-index: 9999;
   }
+
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  
+  .project-card:hover .project-image {
+    transform: scale(1.1);
+  }
+  
+  .project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 15px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+  }
+  
+  .project-card:hover .project-overlay {
+    transform: translateY(0%);
+  }
+  
+  .project-overlay h3 {
+    margin: 0 0 5px;
+    color: #ff5252;
+  }
+  
+  .project-overlay p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Remove default image resizing */
+.mfp-img {
+  max-height: none !important;
+  height: auto !important;
+}
+
+/* Make the image container scrollable if it exceeds viewport */
+.mfp-figure {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+
 /*   
 .fab, .far {
     font-weight: 400;
